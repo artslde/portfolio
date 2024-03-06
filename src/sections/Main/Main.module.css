@@ -1,0 +1,186 @@
+@import url(../../variables.css);
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--gap) * 2);
+}
+
+a[href^="#"] {
+	scroll-behavior: smooth;
+}
+
+.introductionWrapper {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--gap) * 2);
+}
+
+.headline {
+	color: white;
+	font-size: 3rem;
+	width: 35%;
+}
+
+.introductionAbout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap);
+	width: 100%;
+
+	* {
+		width: 100%;
+	}
+}
+
+.introductionText {
+	color: var(--introduction-text);
+	font-size: 1rem;
+	line-height: 1.75rem;
+}
+
+.educationWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--gap) * 1.5);
+}
+
+.titles {
+	font-weight: 800;
+	line-height: 2;
+	color: var(--titles-text);
+	font-size: 2.2rem;
+}
+
+.card {
+	padding: 20px;
+	gap: var(--gap);
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+
+	.titles {
+		font-size: 1.5rem;
+	}
+}
+
+.educationCardWrapper {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--wrapper-bg);
+	border-radius: var(--outer-radius);
+	gap: var(--gap);
+	padding: var(--padding);
+
+	.card {
+		background-color: var(--education-bg);
+		align-items: center;
+		height: fit-content;
+
+		ul {
+			margin: 0;
+			padding-left: 2rem;
+		}
+	}
+	.card:nth-child(1) {
+		border-radius: 6rem 6rem 2rem 2rem;
+	}
+
+	.card:nth-last-child(1) {
+		border-radius: 2rem 2rem 6rem 6rem;
+	}
+}
+
+.educationCardText {
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: calc(var(--gap) / 2);
+}
+
+/* стили для ссылок */
+.link {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+	transition: 250ms ease-in-out;
+}
+
+.link:hover {
+	background-color: black;
+	color: white;
+	padding: 2px;
+	border-radius: 5px;
+	transform: scale(2);
+}
+
+/* раздел опыт */
+.skillsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--gap) * 1.5);
+}
+
+.skillsCardWrapper {
+	width: 100%;
+	background-color: var(--wrapper-bg);
+	border-radius: var(--outer-radius);
+	padding: var(--padding);
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+
+	.card {
+		background-color: var(--skills-bg);
+		flex-direction: column;
+		width: 50%;
+		height: 15rem;
+
+		ul {
+			list-style-type: square;
+		}
+	}
+
+	.card:nth-child(1) {
+		border-radius: 6rem 2rem 2rem 6rem;
+	}
+	.card:nth-last-child(1) {
+		border-radius: 2rem 6rem 6rem 2rem;
+	}
+}
+
+@media (max-width: 784px) {
+	.educationCardWrapper {
+		.card {
+			flex-direction: column;
+			gap: calc(var(--gap) / 2);
+		}
+	}
+
+	.skillsCardWrapper {
+		flex-direction: column;
+
+		.card {
+			width: 100%;
+
+		}
+
+		.card:nth-child(1) {
+			border-radius: 6rem 6rem 2rem 2rem;
+		}
+		.card:nth-last-child(1) {
+			border-radius: 2rem 2rem 6rem 6rem;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.introductionWrapper {
+		flex-direction: column;
+		gap: var(--gap);
+	}
+}
