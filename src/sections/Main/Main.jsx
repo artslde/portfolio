@@ -49,7 +49,7 @@ export const Main = () => (
 						height={"9rem"}
 					/>
 					<div className={styles.educationCardText}>
-						<h3 className={styles.titles}>Обучение колледже</h3>
+						<h3 className={styles.titles}>Обучение в колледже</h3>
 						<p>
 							На данный момент прохожу обучение в{" "}
 							<a href="" target="_blank" className={styles.link}>
