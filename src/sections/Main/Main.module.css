@@ -6,10 +6,6 @@
 	gap: calc(var(--gap) * 2);
 }
 
-a[href^="#"] {
-	scroll-behavior: smooth;
-}
-
 .introductionWrapper {
 	display: flex;
 	align-items: center;
@@ -161,16 +157,18 @@ a[href^="#"] {
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	.wrapper {
 		--padding: 1rem;
 		--inner-radius: 7rem;
+		--gap: 1rem;
 	}
 
 	.educationCardWrapper {
 		display: grid;
 		grid-auto-flow: column;
 		grid-auto-columns: 100%;
+		overflow: hidden;
 		scroll-snap-type: x mandatory;
 		justify-items: center;
 
@@ -195,10 +193,6 @@ a[href^="#"] {
 }
 
 @media (max-width: 784px) {
-	.wrapper {
-		--gap: 1rem;
-	}
-
 	.educationCardWrapper {
 		.card {
 			flex-direction: column;

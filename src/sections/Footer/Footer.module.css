@@ -1,13 +1,15 @@
 @import url(../../variables.css);
 
 .footer {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--gap);
 }
 
 .footerText {
-   font-weight: 600;
-   color: white;
+	font-weight: 600;
+	color: white;
+	text-wrap: pretty;
 }
