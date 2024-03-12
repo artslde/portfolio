@@ -171,7 +171,6 @@ a[href^="#"] {
 		display: grid;
 		grid-auto-flow: column;
 		grid-auto-columns: 100%;
-		overflow-x: hidden;
 		scroll-snap-type: x mandatory;
 		justify-items: center;
 
