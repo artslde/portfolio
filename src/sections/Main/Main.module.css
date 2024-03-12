@@ -135,7 +135,7 @@ a[href^="#"] {
 	padding: var(--padding);
 	display: flex;
 	flex-direction: row;
-	gap: 2rem;
+	gap: var(--gap);
 
 	.card {
 		background-color: var(--skills-bg);
@@ -176,6 +176,7 @@ a[href^="#"] {
 		justify-items: center;
 
 		> .card {
+			height: 100%;
 			scroll-snap-align: center;
 			scroll-snap-stop: always;
 		}
@@ -195,10 +196,13 @@ a[href^="#"] {
 }
 
 @media (max-width: 784px) {
+	.wrapper {
+		--gap: 1rem;
+	}
+
 	.educationCardWrapper {
 		.card {
 			flex-direction: column;
-			gap: calc(var(--gap) / 2);
 		}
 	}
 
